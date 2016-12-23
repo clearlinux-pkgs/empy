@@ -4,7 +4,7 @@
 #
 Name     : empy
 Version  : 3.3.2
-Release  : 1
+Release  : 2
 URL      : http://www.alcyone.com/software/empy/empy-3.3.2.tar.gz
 Source0  : http://www.alcyone.com/software/empy/empy-3.3.2.tar.gz
 Summary  : No detailed summary available
