@@ -4,13 +4,14 @@
 #
 Name     : empy
 Version  : 3.3.3
-Release  : 5
+Release  : 6
 URL      : http://www.alcyone.com/software/empy/empy-3.3.3.tar.gz
 Source0  : http://www.alcyone.com/software/empy/empy-3.3.3.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: empy-legacypython
+Requires: empy-python3
 Requires: empy-python
 BuildRequires : pbr
 BuildRequires : pip
@@ -38,6 +39,7 @@ command line options and embedded commands.
 %package legacypython
 Summary: legacypython components for the empy package.
 Group: Default
+Requires: python-core
 
 %description legacypython
 legacypython components for the empy package.
@@ -47,9 +49,19 @@ legacypython components for the empy package.
 Summary: python components for the empy package.
 Group: Default
 Requires: empy-legacypython
+Requires: empy-python3
 
 %description python
 python components for the empy package.
+
+
+%package python3
+Summary: python3 components for the empy package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the empy package.
 
 
 %prep
@@ -60,12 +72,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505002161
+export SOURCE_DATE_EPOCH=1507153423
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505002161
+export SOURCE_DATE_EPOCH=1507153423
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -81,5 +93,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
