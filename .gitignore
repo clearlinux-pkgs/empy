@@ -1,0 +1,4 @@
+*.tar.*
+results
+*.log
+.repo-index
