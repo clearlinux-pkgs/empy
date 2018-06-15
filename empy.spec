@@ -14,7 +14,7 @@ Requires: empy-python3
 Requires: empy-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
