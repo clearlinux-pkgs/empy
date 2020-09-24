@@ -4,7 +4,7 @@
 #
 Name     : empy
 Version  : 3.3.4
-Release  : 28
+Release  : 29
 URL      : http://www.alcyone.com/software/empy/empy-3.3.4.tar.gz
 Source0  : http://www.alcyone.com/software/empy/empy-3.3.4.tar.gz
 Summary  : A templating system for Python.
